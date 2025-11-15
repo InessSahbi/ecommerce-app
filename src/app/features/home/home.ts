@@ -55,15 +55,15 @@ export class Home {
     },
     {
       name: "Popular Item",
-      price: "40.00",
-      image: "olivier-collet-VDGBFiaM6Cs-unsplash.jpg",
+      price: "60.00",
+      image: "erick-cerritos-i5UV2HpITYA-unsplash.jpg",
       sale: false,
       rating: 5
     },
     {
       name: "Popular Item",
-      price: "40.00",
-      image: "sdl-sanjaya-VBVtNgkA3ak-unsplash.jpg",
+      price: "60.00",
+      image: "maxim-hopman-Hin-rzhOdWs-unsplash.jpg",
       sale: false,
       rating: 5
     },
