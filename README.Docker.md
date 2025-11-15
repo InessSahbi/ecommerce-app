@@ -1,64 +1,22 @@
-# Dependencies
-node_modules/
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+### Building and running your application
 
-# Testing
-/coverage/
-/.nyc_output/
+When you're ready, start your application by running:
+`docker compose up --build`.
 
-# Production build
-/dist/
-/tmp/
-/out-tsc/
+Your application will be available at http://localhost:80.
 
-# IDEs and editors
-/.idea/
-/.vscode/
-*.sublime-workspace
-*.sublime-project
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw*
+### Deploying your application to the cloud
 
-# System Files
-.DS_Store
-Thumbs.db
+First, build your image, e.g.: `docker build -t myapp .`.
+If your cloud uses a different CPU architecture than your development
+machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
+you'll want to build the image for that platform, e.g.:
+`docker build --platform=linux/amd64 -t myapp .`.
 
-# Version control
-.git/
-.gitignore
+Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
 
-# Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
+docs for more detail on building and pushing.
 
-# Angular specific
-/.angular/cache/
-.sass-cache/
-connect.lock
-/libpeerconnection.log
-testem.log
-/typings/
-
-# Documentation
-/documentation/
-README.md
-CHANGELOG.md
-LICENSE
-
-# Docker
-Dockerfile
-docker-compose.yml
-docker-compose.*.yml
+### References
+* [Docker's Node.js guide](https://docs.docker.com/language/nodejs/)
