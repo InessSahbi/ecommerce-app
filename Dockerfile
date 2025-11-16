@@ -9,18 +9,17 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm install --force
-
-RUN npm install -g @angular/cli@20.3.12 --force
+RUN npm install -g @angular/cli@20.3.7 --force
 
 COPY . .
+
 
 RUN ng build --configuration production
 
 FROM nginx:alpine
 
-RUN rm -rf /usr/share/nginx/html/*
-
 COPY --from=build /app/dist/ecommerce-app/browser /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
